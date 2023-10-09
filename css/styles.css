@@ -18,6 +18,13 @@ main {
 
 header {
     grid-area: header;
+    display: grid;
+    grid-template-areas: 
+    "search-bar profile-bar"
+    "hello-bar control-bar";
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 2fr;
+    margin-left: 15px;
 }
 
 .side-bar {
@@ -31,10 +38,12 @@ header {
 .search-bar {
     display: flex;
     align-items: center;
+    grid-area: search-bar;
 }
 
 .icon-search {
-    font-size: 1.5rem;
+    font-size: 1rem;
+    margin-right: 10px;
 }
 
 .icon-bell-alt {
@@ -51,6 +60,7 @@ header {
     border-radius: 50px;
     grid-area: profile-picture;
     margin-right: 25px;
+    margin-top: 13px;
 }
 
 .profile-name {
@@ -63,17 +73,21 @@ header {
     width: 300px;
     align-items: center;
     justify-content: space-between;
+    grid-area: profile-bar;
+    margin-top: 10px;
+    margin-left: 100px;
 }
 
 #search-area {
     margin-top: 10px;
     margin-left: 5px;
     border-radius: 50px;
+    width: 800px;
 }
 
 .hb-first-text {
     grid-area: first-text;
-    margin-top: 12px;
+    margin-top: 25px;
 }
 
 .hb-second-text {
@@ -86,14 +100,40 @@ header {
     grid-template-areas: 
     "profile-picture first-text"
     "profile-picture second-text";
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 4fr;
     width: 425px;
+    height: 100px;
+    grid-area: hello-bar;
 }
 
 .new-button {
     margin-right: 30px;
-    padding: 7px 35px;
+    padding: 7px 30px;
     border-radius: 50px;
     border: 0px;
     background-color: #1992D4;
     color: white;
+}
+
+.control-bar {
+    grid-area: control-bar;
+    margin-top: 40px;
+}
+
+.dashboard-icon {
+    height: 60px;
+}
+
+.dashboard-container {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+.dashboard-container > p {
+    font-size: 1.75rem;
+    margin-top: 5px;
+    margin-left: 15px;
 }
