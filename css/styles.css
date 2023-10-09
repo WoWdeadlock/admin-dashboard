@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,500&display=swap');
+
 * {
+    font-family:'Roboto', sans-serif;
     margin: 0px;
     padding: 0px;
 }
@@ -23,4 +26,63 @@ header {
 
 .content {
     grid-area: content;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.icon-search {
+    font-size: 1.5rem;
+}
+
+.icon-bell-alt {
+    font-size: 1.5rem;
+}
+
+.profile-icon {
+    height: 50px;
+    border-radius: 50px;
+}
+
+.profile-picture {
+    height: 75px;
+    border-radius: 50px;
+    grid-area: profile-picture;
+}
+
+.profile-name {
+    font-size: 1rem;
+    margin-top: 8px;
+}
+
+.profile-bar {
+    display: flex;
+    width: 300px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#search-area {
+    margin-top: 10px;
+    margin-left: 5px;
+    border-radius: 50px;
+}
+
+.hb-first-text {
+    grid-area: first-text;
+}
+
+.hb-second-text {
+    font-size: 1.25rem;
+    grid-area: second-text;
+}
+
+.hello-bar {
+    display: grid;
+    grid-template-areas: 
+    "profile-picture first-text"
+    "profile-picture second-text";
+    width: 400px;
 }
