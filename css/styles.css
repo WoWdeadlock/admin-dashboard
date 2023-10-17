@@ -22,13 +22,19 @@ main {
     "introduction-bar introduction-bar button-bar";
     margin-top: 20px;
     row-gap: 30%;
-    margin-left: 5%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding-left: 5%;
+    padding-bottom: 50px;
 }
 
 .nav-bar {
     grid-area: nav-bar;
     background-color: rgb(155, 5, 5);
-    display: grid;
+    padding-right: 90px;
+}
+
+.nav-bar > div {
+    margin-bottom: 75px;
 }
 
 .dashboard {
@@ -116,7 +122,7 @@ main {
 }
 
 .dt-text {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: bold;
     color: white;
 }
@@ -139,7 +145,7 @@ main {
     font-weight: bold;
     display: flex;
     align-items: center;
-    margin-bottom: 5%;
+    margin-bottom: 20px;
 }
 
 .nav-bar i {
@@ -148,7 +154,7 @@ main {
 }
 
 .nb-icon-text {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 }
 
 .dashboard-title {
@@ -156,6 +162,106 @@ main {
 }
 
 .nav-bar > div {
-    margin-left: 8%;
-    margin-bottom: 13%;
+    margin-left: 50px;
+}
+
+.dashboard {
+    display: grid;
+    grid-template-areas:
+    "project-tab announcements-tab"
+    "project-tab announcements-tab";
+    background-color: rgba(255, 0, 0, 0.205);
+}
+
+.project-card {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    padding: 3%;
+    border-radius: 5px;
+    border-left: 8px solid rgb(3, 121, 231);
+}
+
+.project-title {
+    font-weight: bold;
+}
+
+.project-text {
+    color: grey;
+}
+
+.project-options {
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+    margin-top: 10%;
+}
+
+.project-options i {
+    font-size: 1.25rem;
+}
+
+.project-title {
+    font-size: 1rem;
+}
+
+.project-card-container {
+    grid-area: project-tab;
+    display: grid;
+    grid-template-rows: repeat(3,1fr);
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+}
+
+.project-tab {
+    margin-top: 30px;
+    margin-left: 20px;
+    padding-bottom: 40px;
+}
+
+.heading, .announcement-heading {
+    font-weight: bold;
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.announcement-heading {
+    margin-top: 10%;
+}
+
+.announcements-tab {
+    grid-area: announcements-tab;
+}
+
+.announcement-card {
+    background-color: white;
+    width: 250px;
+    padding: 30px;
+    border-radius: 5px;
+    margin-right: 40px;
+}
+
+.sm-heading {
+    font-weight: bold;
+}
+
+.sm-text {
+    color: grey;
+    padding-bottom: 15px;
+}
+
+.sm-link {
+    box-shadow: 0px 1px 0px 0px rgba(0, 0, 0, 0.25);
+    margin-bottom: 15px;
+}
+
+.trending-tab {
+    grid-area: announcements-tab;
+}
+
+.trending-card {
+    height: 400px;
+    width: 300px;
+    border: 1px solid black;
 }
